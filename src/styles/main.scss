@@ -1,5 +1,56 @@
-$bgColor: #2fee58; 
+@use 'hero';
+// @use 'variaveis';
+$corDefundo: #040714;
+$corTextoPrincipal: silver;
+$corTextoSecundario:#f9f9f9;
 
-body{
-    background-color: $bgColor;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $corDefundo;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize ;
+    line-height: $fontSize + 10px;
+    color: $corTextoPrincipal;
+}
+
+@mixin tittle($fontSize: 40px) {
+    @include text($fontSize);
+    color: $corTextoSecundario;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px)
+}
+
+.link-text {
+    @include text(18px);
+    color: $corTextoSecundario;
+    text-decoration: underline;
+}
+
+.title--big {
+    @include tittle(44px);
+}
+
+.title {
+    @include tittle;
+}
+
+.title--small {
+    @include tittle(28px);
 }
