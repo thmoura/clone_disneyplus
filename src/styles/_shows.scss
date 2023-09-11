@@ -5,9 +5,13 @@
 
     &__list {
         margin-top: 44px;
-        display: grid;
+        display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+
+        &--is-active {
+            display: grid;
+        }
 
         &__item {
             img {
