@@ -24,6 +24,7 @@
     &__tabs {
         display: flex;
         justify-content: center;
+
         &__button {
             color: variaveis.$corTextoSecundario;
             font-size: 20px;
@@ -32,6 +33,7 @@
             background: none;
             text-transform: uppercase;
             margin: 0 1vw;     
+            cursor: pointer;
             
             &--is-active {
                 border-bottom: 5px solid variaveis.$corTextoSecundario;
